@@ -14,7 +14,7 @@ enum {MAKE =1,DEPOSIT, WITHDRAW, INQUIRE, EXIT};
 
 typedef struct {
 	int accID;  // 계좌번호
-	int balance; // 잔액
+	int result_money; // 잔액
 	char cusName[NAME_LEN]; // 고객 이름
 }Account;
 
@@ -73,7 +73,7 @@ void MakeAccount(void) {
 	cout << endl;
 
 	accArr[accNum].accID = id;
-	accArr[accNum].balance = balance;
+	accArr[accNum].result_money = balance;
 	strcpy_s(accArr[accNum].cusName, name);
 	accNum++;
 }
@@ -88,7 +88,7 @@ void DepositMoney(void) {
 
 	for (int i = 0; i < accNum; i++) {
 		if (accArr[i].accID = id) {
-			accArr[i].balance += money;
+			accArr[i].result_money += money;
 			cout << "입금완료" << endl << endl;
 			return;
 		}
@@ -105,12 +105,12 @@ void WithdrawMoney(void) {
 
 	for (int i = 0; i < accNum; i++) {
 		if (accArr[i].accID = id) {
-			if (accArr[i].balance < money) {
+			if (accArr[i].result_money < money) {
 				cout << "잔액부족" << endl << endl;
 				return;
 			}
 			
-			accArr[i].balance -= money;
+			accArr[i].result_money -= money;
 			cout << "출금완료" << endl << endl;
 			return;
 		}
@@ -122,6 +122,6 @@ void ShowAllAccInfo(void) {
 	for (int i = 0; i < accNum; i++) {
 		cout << "계좌ID : " << accArr[i].accID << endl;
 		cout << "이  름 : " << accArr[i].cusName << endl;
-		cout << "잔  액 : " << accArr[i].balance << endl;
+		cout << "잔  액 : " << accArr[i].result_money << endl;
 	}
 }
