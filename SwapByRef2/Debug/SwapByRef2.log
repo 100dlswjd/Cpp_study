@@ -1,0 +1,3 @@
+﻿  SwapByRef2.cpp
+C:\Users\인정\Desktop\github\Cpp_study\SwapByRef2\SwapByRef2.cpp(13,18): error C2664: 'void SwapByRef(int &,int &)': 인수 1을(를) 'int'에서 'int &'(으)로 변환할 수 없습니다.
+C:\Users\인정\Desktop\github\Cpp_study\SwapByRef2\SwapByRef2.cpp(3,6): message : 'SwapByRef' 선언을 참조하십시오.
