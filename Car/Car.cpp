@@ -24,7 +24,9 @@ void Car::ShowCarState() {
 }
 
 void Car::Break() {
-	if (curSpeed <= 0)
+	if (curSpeed <= 0) {
+		curSpeed = 0;
 		return;
-
+	}
+	curSpeed -= CAR_CONST::BRK_STEP;
 }
