@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9137891e-218d-4916-a161-d4e45b0d6c0e}</ProjectGuid>
-    <RootNamespace>ClassInit</RootNamespace>
+    <ProjectGuid>{922e9587-b870-481d-8d6c-faeb1a446213}</ProjectGuid>
+    <RootNamespace>ShallowCopyError</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Classinit.cpp" />
+    <ClCompile Include="ShallowCopyError.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
