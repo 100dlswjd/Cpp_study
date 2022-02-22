@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LowMouseHook", "LowMouseHook.vcxproj", "{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Debug|x64.ActiveCfg = Debug|x64
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Debug|x64.Build.0 = Debug|x64
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Debug|x86.ActiveCfg = Debug|Win32
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Debug|x86.Build.0 = Debug|Win32
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Release|x64.ActiveCfg = Release|x64
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Release|x64.Build.0 = Release|x64
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Release|x86.ActiveCfg = Release|Win32
+		{FFF206BE-4F7D-4C26-BE25-CAAC1DC2052E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2495FB9A-4794-4921-9344-E7F49E72C526}
+	EndGlobalSection
+EndGlobal
