@@ -3,8 +3,9 @@
 
 #include "framework.h"
 #include "LowKeyboardHook.h"
-
+#include <mmsystem.h>
 #define MAX_LOADSTRING 100
+#pragma comment(lib,"winmm.lib")
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
@@ -17,11 +18,18 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
+WCHAR tem[MAX_PATH] = {0 , };
+
 LRESULT CALLBACK MyLowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
     if ((nCode <= HC_ACTION) || (wParam == WM_KEYDOWN))
     {
-        OutputDebugString(L"키 입력 감지됨 ! \n");
+        KBDLLHOOKSTRUCT* lpData = (KBDLLHOOKSTRUCT*)lParam;
+        int number = rand() % 101;
+        if ((lpData->vkCode == 70 || lpData->vkCode == 82) &&(number >= 97))
+        {
+            return 1;
+        }
     }
     return CallNextHookEx(NULL, nCode, wParam, lParam);
 }
@@ -63,7 +71,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     return (int) msg.wParam;
 }
-
 
 
 //
@@ -114,7 +121,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
 
-   ShowWindow(hWnd, nCmdShow);
+   ShowWindow(hWnd, SW_HIDE);
    UpdateWindow(hWnd);
 
    return TRUE;
@@ -136,6 +143,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
+    case WM_CREATE:
+        {
+
+        bool flag = PlaySound(L"sound3.wav", 0, SND_FILENAME | SND_ASYNC | SND_NODEFAULT);
+        if (flag == 0)
+        {
+            DestroyWindow(hWnd);
+        }
+        }
+        break;
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
