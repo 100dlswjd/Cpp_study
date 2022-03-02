@@ -18,5 +18,11 @@ int main()
 	if (addr == NULL) std::cout << "add 함수 없음 !" << std::endl;
 	else std::cout << "add 함수 주소 : " << addr << std::endl;
 
+	DLL_ADD adder = (DLL_ADD)addr;
+
+	int result = adder(1, 2);
+
+	std::cout << "결과 : " << result << std::endl;
+
 	return 1;
 }
