@@ -6,7 +6,7 @@ typedef FARPROC (WINAPI* FP_GETPROCADDRESS)(HMODULE, LPCSTR);
 
 int main()
 {
-	HMODULE hMod = GetModuleHandle(L"Kernel32.dll");
+	HMODULE hMod = GetModuleHandle(L"Win32API.dll");
 	if (hMod == NULL)
 	{
 		std::cout << "not module !" << std::endl;
