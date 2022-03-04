@@ -25,7 +25,11 @@ HOOKDLL_API int fnHookDLL(void);
 #define MOUSE_HOOK		0x00000002
 #define WM_KEYHOOK		WM_USER + 1
 #define WM_MOUSEHOOK	WM_USER + 2
+#define WM_MOUSEHOOK_PT WM_USER + 3
 
 extern HMODULE g_hMod;
 extern "C" HOOKDLL_API BOOL InstallHook(HWND hInstaller, DWORD dwHookFlag);
 extern "C" HOOKDLL_API BOOL UnInstallHook(DWORD dwHookFlag);
+
+BOOL InstallAPIHook();
+BOOL UnInstallAPIHook();
