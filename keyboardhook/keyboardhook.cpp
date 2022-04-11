@@ -1,11 +1,10 @@
-﻿// LowKeyboardHook.cpp : 애플리케이션에 대한 진입점을 정의합니다.
+﻿// keyboardhook.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
 
 #include "framework.h"
-#include "LowKeyboardHook.h"
-#include <mmsystem.h>
+#include "keyboardhook.h"
+
 #define MAX_LOADSTRING 100
-#pragma comment(lib,"winmm.lib")
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
@@ -17,22 +16,6 @@ ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
-
-WCHAR tem[MAX_PATH] = {0 , };
-
-LRESULT CALLBACK MyLowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
-{
-    if ((nCode <= HC_ACTION) || (wParam == WM_KEYDOWN))
-    {
-        KBDLLHOOKSTRUCT* lpData = (KBDLLHOOKSTRUCT*)lParam;
-        int number = rand() % 101;
-        if ((lpData->vkCode == 70 || lpData->vkCode == 82) &&(number >= 97))
-        {
-            return 1;
-        }
-    }
-    return CallNextHookEx(NULL, nCode, wParam, lParam);
-}
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -46,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_LOWKEYBOARDHOOK, szWindowClass, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_KEYBOARDHOOK, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
     // 애플리케이션 초기화를 수행합니다:
@@ -55,7 +38,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_LOWKEYBOARDHOOK));
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_KEYBOARDHOOK));
 
     MSG msg;
 
@@ -71,6 +54,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     return (int) msg.wParam;
 }
+
 
 
 //
@@ -89,10 +73,10 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbClsExtra     = 0;
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_LOWKEYBOARDHOOK));
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_KEYBOARDHOOK));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_LOWKEYBOARDHOOK);
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_KEYBOARDHOOK);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
@@ -121,10 +105,19 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
 
-   ShowWindow(hWnd, SW_HIDE);
+   ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
    return TRUE;
+}
+
+LRESULT CALLBACK MyLowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
+{
+    if ((nCode >= HC_ACTION) || (wParam == WM_KEYDOWN))
+    {
+        OutputDebugString(L"키보드 눌렀다아아아\n");
+    }
+    return CallNextHookEx(NULL, nCode, wParam, lParam);
 }
 
 //
@@ -143,16 +136,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
-    case WM_CREATE:
-        {
-
-        //bool flag = PlaySound(L"sound3.wav", 0, SND_FILENAME | SND_ASYNC | SND_NODEFAULT);
-        //if (flag == 0)
-        //{
-        //    DestroyWindow(hWnd);
-        //}
-        }
-        break;
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
@@ -179,8 +162,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         }
         break;
     case WM_DESTROY:
-        UnhookWindowsHookEx(g_hook);
         PostQuitMessage(0);
+        UnhookWindowsHookEx(g_hook);
         break;
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
