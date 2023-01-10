@@ -107,7 +107,9 @@ LRESULT CALLBACK MyLowLevelMouseProc(int nCode, WPARAM wParam, LPARAM lParam)
         if (wParam == WM_RBUTTONUP)
             OutputDebugString(L"R버튼 업\n");
         if (wParam == WM_MOUSEMOVE)
+        {
             OutputDebugString(L"마우스 움직\n");
+        }
         if (wParam == WM_MOUSEWHEEL)
             OutputDebugString(L"마우스 휠 돌림\n");
     }
