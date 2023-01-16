@@ -77,6 +77,7 @@ BOOL Injector(std::wstring ProcessName, std::wstring szDllPath, int injectMode)
 {
 	DWORD PID = 0;
 	HANDLE hSnapShot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, NULL);
+	HANDLE hSnapShot_thread = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, NULL);
 
 	if (hSnapShot == INVALID_HANDLE_VALUE)
 		return FALSE;
@@ -100,8 +101,8 @@ BOOL Injector(std::wstring ProcessName, std::wstring szDllPath, int injectMode)
 			}
 			else
 			{
-				EjectDll(PID, szDllPath);
-				std::cout << "이젝션 "<< std::endl;
+				BOOL T = EjectDll(PID, szDllPath);
+				std::cout << "이젝션 : " << T << std::endl;
 			}
 		}
 
@@ -115,9 +116,11 @@ int main()
 	// Hook86, Hook64 
 	// UnHook86, UnHook64
 
-	std::wstring file = L"C:\\Users\\USER\\source\\repos\\globalHook\\x64\\Debug\\Hook64.dll";
+	//std::wstring file = L"C:\\Users\\USER\\source\\repos\\globalHook\\x64\\Debug\\Hook64.dll";
+	//std::wstring file = L"C:\\Users\\USER\\source\\repos\\globalHook\\x64\\Debug\\IATHook64.dll";
+	std::wstring file = L"C:\\Users\\USER\\source\\repos\\globalHook\\x64\\Debug\\HideIATHook64.dll";
 	//file = L"Hook64.dll";
 	std::cout << "Hello world" << std::endl;
-	Injector(L"notepad.exe", file, EJECT);
+	Injector(L"Taskmgr.exe", file, INJECT);
 	return 0;
 }

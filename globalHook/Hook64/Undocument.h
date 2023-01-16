@@ -343,3 +343,4 @@ typedef NTSTATUS (NTAPI *t_NtQuerySystemInformation)(
 	 ULONG SystemInformationLength,
 	 PULONG ReturnLength
 );
+
