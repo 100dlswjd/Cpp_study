@@ -128,14 +128,24 @@ int main()
 {
 	EmployeeHandler handler;
 
-	handler.AddEmployee(new PermanentWorker("KIN", 10000));
-	handler.AddEmployee(new PermanentWorker("IN", 50000));
-	handler.AddEmployee(new PermanentWorker("JUN", 17000));
+	// 정규직등록
+	handler.AddEmployee(new PermanentWorker("KIN", 1000));
+	handler.AddEmployee(new PermanentWorker("LEE", 1500));
 
+	// 임시직 등록
+	TemporaryWorker* alba = new TemporaryWorker("Jung", 700);
+	alba->AddWorkTime(5);
+	handler.AddEmployee(alba);
+
+	// 영업직 등록	
+	SalesWorker* seller = new SalesWorker("Hong", 1000, 0.1);
+	seller->AddSalesResult(7000);
+	handler.AddEmployee(seller);
+
+	// 이번 달에 지불해야 할 급여의 정보
 	handler.ShowAllSalaryInfo();
-
+	// 이번 달에 지불해야 할 급여의 총합
 	handler.ShowTotalSalary();
-
 	
 	return 0;
 }
