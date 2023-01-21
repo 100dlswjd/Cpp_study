@@ -11,12 +11,18 @@ public:
 		std::size_t fname_length = fname.copy(name, sizeof(fname), 0);
 		name[fname_length] = '\0';
 	}
-	void ShowYourName()const
+	void ShowYourName() const
 	{
-		std::cout << this->name << std::endl;
+		std::cout << "name : " << this->name << std::endl;
 	}
+	virtual int GetPay() const
+	{
+		return 0;
+	}
+	virtual void ShowSalaryInfo() const
+	{ }
 };
-
+	
 class PermanentWorker : public Employee
 {
 private:
@@ -76,7 +82,7 @@ public:
 	}
 	int GetPay() const
 	{
-		return PermanentWorker::GetPay();
+		return PermanentWorker::GetPay() + (int)(salesResult * bonusRatio);
 	}
 	void ShowSalaryInfo() const
 	{
@@ -88,7 +94,7 @@ public:
 class EmployeeHandler 
 {
 private:
-	Employee * emplist[50];
+	Employee* emplist[50];
 	int empNum;
 public:
 	EmployeeHandler() : empNum(0)
@@ -99,22 +105,20 @@ public:
 	}
 	void ShowAllSalaryInfo() const
 	{
-		/*
 		for(int i = 0 ; i < empNum; i++)
 		{
 			emplist[i]->ShowSalaryInfo();
 		}
-		*/
 	}
 	void ShowTotalSalary() const
 	{
 		int sum = 0;
-		/*
+
 		for (int i = 0; i < empNum; i++)
 		{
 			sum += emplist[i]->GetPay();
 		}
-		*/
+
 		std::cout << "Salary sum : " << sum << std::endl;
 	}
 	~EmployeeHandler()
