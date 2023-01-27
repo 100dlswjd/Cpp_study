@@ -36,7 +36,7 @@ bool operator!=(const Point& pos1, const Point& pos2)
 {
 	return !(pos1 == pos2);
 }
-
+/*
 int main()
 {
 	Point pos1(10, 10);
@@ -51,3 +51,4 @@ int main()
 
 	return 0;
 }
+*/
