@@ -140,8 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CommuMultipleOperation.cpp" />
+    <ClCompile Include="ConsoleOutput.cpp" />
     <ClCompile Include="FirstOperationOverloading.cpp" />
     <ClCompile Include="GFunctionOverloading.cpp" />
+    <ClCompile Include="IterateConsole.cpp" />
     <ClCompile Include="OneOpndOverloading.cpp" />
     <ClCompile Include="OverloadingOperation.cpp" />
     <ClCompile Include="PointMultiOperation.cpp" />
