@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CommuMultipleOperation.cpp" />
     <ClCompile Include="FirstOperationOverloading.cpp" />
     <ClCompile Include="GFunctionOverloading.cpp" />
     <ClCompile Include="OneOpndOverloading.cpp" />
     <ClCompile Include="OverloadingOperation.cpp" />
+    <ClCompile Include="PointMultiOperation.cpp" />
     <ClCompile Include="test-10-2-1.cpp" />
     <ClCompile Include="test-10-2-2.cpp" />
     <ClCompile Include="test10-1-1.cpp" />

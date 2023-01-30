@@ -18,7 +18,7 @@ public:
 		return pos;
 	};
 };
-
+/*
 int main()
 {
 	Point pos(1, 0);
@@ -30,3 +30,4 @@ int main()
 	pos2.ShowPosition();
 	return 0;
 }
+*/
