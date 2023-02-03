@@ -146,6 +146,7 @@
     <ClCompile Include="IterateConsole.cpp" />
     <ClCompile Include="OneOpndOverloading.cpp" />
     <ClCompile Include="OverloadingOperation.cpp" />
+    <ClCompile Include="PointConsoleOutput.cpp" />
     <ClCompile Include="PointMultiOperation.cpp" />
     <ClCompile Include="test-10-2-1.cpp" />
     <ClCompile Include="test-10-2-2.cpp" />
