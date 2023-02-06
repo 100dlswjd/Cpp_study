@@ -148,6 +148,7 @@
     <ClCompile Include="StablePointObjArray.cpp" />
     <ClCompile Include="StablePointPtrArray.cpp" />
     <ClCompile Include="test 11 - 2 - 1.cpp" />
+    <ClCompile Include="test 11 - 2 - 2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
