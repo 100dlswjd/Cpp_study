@@ -144,6 +144,9 @@
     <ClCompile Include="FirstOperationOverloading.cpp" />
     <ClCompile Include="ImproveInit.cpp" />
     <ClCompile Include="InheritAssignOperation.cpp" />
+    <ClCompile Include="StableConstArrayProb.cpp" />
+    <ClCompile Include="StablePointObjArray.cpp" />
+    <ClCompile Include="StablePointPtrArray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

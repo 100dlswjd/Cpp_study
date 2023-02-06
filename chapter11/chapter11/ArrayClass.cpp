@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 class BoundCheckIntArray
@@ -36,3 +37,4 @@ int main(void)
 
 	return 0;
 }
+*/
