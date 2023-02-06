@@ -20,6 +20,17 @@ public:
 		std::cout << "이름 : " << name << std::endl;
 		std::cout << "나이 : " << age << std::endl;
 	}
+
+	Person& operator=(const Person& ref)
+	{
+		delete[]name;
+		int len = strlen(ref.name) + 1;
+		name = new char[len];
+		strcpy_s(name, len, ref.name);
+		age = ref.age;
+
+		return *this;
+	}
 	~Person()
 	{
 		delete[]name;
