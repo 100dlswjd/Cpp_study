@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayClass.cpp" />
     <ClCompile Include="AssignShallowCopyError.cpp" />
     <ClCompile Include="FirstOperationOverloading.cpp" />
     <ClCompile Include="ImproveInit.cpp" />
