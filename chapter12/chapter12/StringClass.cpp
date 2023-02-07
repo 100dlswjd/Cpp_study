@@ -42,8 +42,8 @@ public:
 	{
 		int rlen = len + (s.len - 1);
 		char* tempstr = new char[rlen];
-		strcpy_s(tempstr, len, str);
-		strcat_s(tempstr, len, s.str);
+		strcpy_s(tempstr, rlen, str);
+		strcat_s(tempstr, strlen(tempstr) + strlen(s.str) + 1 , s.str);
 		if (str != NULL)
 			delete[] str;
 		str = tempstr;
@@ -57,7 +57,7 @@ public:
 	{
 		char* tempstr = new char[len + s.len - 1];
 		strcpy_s(tempstr, len + s.len - 1, str);
-		strcat_s(tempstr, len, s.str);
+		strcat_s(tempstr, strlen(tempstr) + strlen(s.str) + 1, s.str);
 
 		String temp(tempstr);
 		delete[]tempstr;
@@ -91,16 +91,17 @@ int main(void)
 
 	std::cout << str1 << std::endl;
 	std::cout << str2 << std::endl;
-	std::cout << str3 << std::endl;
+	//std::cout << str3 << std::endl;
 
 	str1 += str2;
+	/*
 	if (str1 == str3)
 		std::cout << "같음 !" << std::endl;
 	else
 		std::cout << "다름 !" << std::endl;
-
+		*/
 	String str4;
-	std::cout << "문자열 입력 :";
+	std::cout << "문자열 입력 : ";
 	std::cin >> str4;
 	std::cout << "입력한 문자열 : " << str4 << std::endl;
 	return 0;
