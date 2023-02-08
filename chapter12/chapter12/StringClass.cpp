@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <cstring>
 
@@ -94,15 +95,14 @@ int main(void)
 	//std::cout << str3 << std::endl;
 
 	str1 += str2;
-	/*
 	if (str1 == str3)
 		std::cout << "같음 !" << std::endl;
 	else
 		std::cout << "다름 !" << std::endl;
-		*/
 	String str4;
 	std::cout << "문자열 입력 : ";
 	std::cin >> str4;
 	std::cout << "입력한 문자열 : " << str4 << std::endl;
 	return 0;
 }
+*/
