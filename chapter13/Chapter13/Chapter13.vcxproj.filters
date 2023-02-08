@@ -18,5 +18,8 @@
     <ClCompile Include="AddFunctionTemplate.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="TwoTypeAddFunction.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

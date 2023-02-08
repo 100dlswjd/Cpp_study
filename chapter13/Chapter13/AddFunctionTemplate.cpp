@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 template <typename T>
@@ -12,3 +13,4 @@ int main(void)
 	std::cout << Add(3.2, 3.2) << std::endl;
 	std::cout << Add(3.14, 2.75) << std::endl;
 }
+*/
