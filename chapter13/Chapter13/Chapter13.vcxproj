@@ -141,11 +141,18 @@
   <ItemGroup>
     <ClCompile Include="AddFunctionTemplate.cpp" />
     <ClCompile Include="NeedSpecialFunctionTemplate.cpp" />
+    <ClCompile Include="PointClassTemplate.cpp" />
+    <ClCompile Include="PointClassTemplateFuncDef.cpp" />
+    <ClCompile Include="PointMain.cpp" />
+    <ClCompile Include="PointTemplate.cpp" />
     <ClCompile Include="PrimitiveFuncionTemplate.cpp" />
     <ClCompile Include="SpecialFunctionTemplate.cpp" />
     <ClCompile Include="test 13 - 1 - 1.cpp" />
     <ClCompile Include="test 13 - 1 - 2.cpp" />
     <ClCompile Include="TwoTypeAddFunction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PointTemplate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
