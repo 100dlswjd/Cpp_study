@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 template <class T1, class T2>
@@ -16,3 +17,4 @@ int main(void)
 	ShowData<short, double>(70.4);
 	return 0;
 }
+*/
