@@ -149,6 +149,7 @@
     <ClCompile Include="SpecialFunctionTemplate.cpp" />
     <ClCompile Include="test 13 - 1 - 1.cpp" />
     <ClCompile Include="test 13 - 1 - 2.cpp" />
+    <ClCompile Include="test 13 - 2 - 1.cpp" />
     <ClCompile Include="TwoTypeAddFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
