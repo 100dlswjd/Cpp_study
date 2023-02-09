@@ -1,3 +1,5 @@
+/*
+
 #include <iostream>
 
 template <typename T, int len>
@@ -41,3 +43,4 @@ int main(void)
 
 	return 0;
 }
+*/

@@ -28,6 +28,7 @@
     <ClCompile Include="ClassTemplatespecialization.cpp" />
     <ClCompile Include="NoneTypeTemplateParam.cpp" />
     <ClCompile Include="PointTemplateFriendFunction.cpp" />
+    <ClCompile Include="TemplateParamDefaultValue.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
