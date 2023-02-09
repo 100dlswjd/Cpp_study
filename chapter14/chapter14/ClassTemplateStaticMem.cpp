@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 template <typename T>
@@ -26,3 +27,4 @@ int main(void)
 	obj4.ShowMem();
 	return 0;
 }
+*/
