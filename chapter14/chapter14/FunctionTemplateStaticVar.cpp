@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 template <typename T>
@@ -24,3 +25,4 @@ int main(void)
 	std::cout << std::endl;
 	return 0;
 }
+*/
