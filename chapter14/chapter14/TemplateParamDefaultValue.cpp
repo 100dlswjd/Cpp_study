@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 template <typename T = int, int len = 7>
@@ -25,3 +26,4 @@ int main(void)
 	std:: cout << std::endl;
 	return 0;
 }
+*/
