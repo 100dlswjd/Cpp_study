@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 template <typename T1, typename T2>
@@ -45,3 +46,4 @@ int main(void)
 	obj3.WhoAreYou();
 	return 0;
 }
+*/

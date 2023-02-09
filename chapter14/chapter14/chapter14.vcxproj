@@ -26,6 +26,7 @@
     <ClCompile Include="BoundArrayMain.cpp" />
     <ClCompile Include="ClassTemplatePartialSpecialization.cpp" />
     <ClCompile Include="ClassTemplatespecialization.cpp" />
+    <ClCompile Include="NoneTypeTemplateParam.cpp" />
     <ClCompile Include="PointTemplateFriendFunction.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
