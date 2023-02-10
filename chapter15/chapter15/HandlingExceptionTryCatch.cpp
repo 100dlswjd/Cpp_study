@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 int main(void)
@@ -20,3 +21,4 @@ int main(void)
 	std::cout << "end of main" << std::endl;
 	return 0;
 }
+*/

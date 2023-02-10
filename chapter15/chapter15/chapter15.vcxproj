@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HandlingExceptionTryCatch.cpp" />
+    <ClCompile Include="PassException.cpp" />
     <ClCompile Include="UnhandlingException.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
