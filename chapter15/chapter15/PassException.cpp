@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 void Divide(int num1, int num2)
@@ -26,3 +27,4 @@ int main(void)
 	}
 	return 0;
 }
+*/

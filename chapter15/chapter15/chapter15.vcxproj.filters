@@ -24,5 +24,11 @@
     <ClCompile Include="PassException.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DiffHandlingPosition.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BadAlloc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
