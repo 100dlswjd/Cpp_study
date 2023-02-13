@@ -143,6 +143,7 @@
     <ClCompile Include="DiffHandlingPosition.cpp" />
     <ClCompile Include="HandlingExceptionTryCatch.cpp" />
     <ClCompile Include="PassException.cpp" />
+    <ClCompile Include="ReThrow.cpp" />
     <ClCompile Include="UnhandlingException.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

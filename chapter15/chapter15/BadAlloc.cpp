@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <new>
 
@@ -21,3 +22,4 @@ int main(void)
 	}
 	return 0;
 }
+*/
