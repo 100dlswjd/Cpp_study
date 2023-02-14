@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 
 class Car
@@ -28,16 +27,13 @@ public:
 
 int main(void)
 {
-	
-	// Car* pcar1 = new Truck(80, 200);
-	// Truck* ptruck1 = dynamic_cast<Truck*>(pcar1); // x
+	Car* pcar1 = new Truck(80, 120);
+	Truck* ptruck1 = static_cast<Truck*>(pcar1);
+	ptruck1->ShowTruckState();
+	std::cout << std::endl;
 
-	// Car* pcar2 = new Car(120);
-	// Truck* ptruck2 = dynamic_cast<Truck*>(pcar2); // x
-	
-	Truck* ptruck3 = new Truck(70, 150);
-	Car* pcar3 = dynamic_cast<Truck*>(ptruck3);
-
+	Car* pcar2 = new Car(120);
+	Truck* ptruck2 = static_cast<Truck*>(pcar2);
+	ptruck2->ShowTruckState();
 	return 0;
 }
-*/

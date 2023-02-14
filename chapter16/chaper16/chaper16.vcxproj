@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="DynamicCasting.cpp" />
     <ClCompile Include="PowerfullCasting.cpp" />
+    <ClCompile Include="StaticCasting.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
