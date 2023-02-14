@@ -142,6 +142,7 @@
     <ClCompile Include="ConstCasting.cpp" />
     <ClCompile Include="DynamicCasting.cpp" />
     <ClCompile Include="PowerfullCasting.cpp" />
+    <ClCompile Include="ReinterpretCasting.cpp" />
     <ClCompile Include="StaticCasting.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
