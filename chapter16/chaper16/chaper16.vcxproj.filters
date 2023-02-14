@@ -30,5 +30,11 @@
     <ClCompile Include="ReinterpretCasting.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="PolymorphicDynamicCasting.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PolymorphicStableCasting.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
