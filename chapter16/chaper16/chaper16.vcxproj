@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConstCasting.cpp" />
     <ClCompile Include="DynamicCasting.cpp" />
     <ClCompile Include="PowerfullCasting.cpp" />
     <ClCompile Include="StaticCasting.cpp" />
