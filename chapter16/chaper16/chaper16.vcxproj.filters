@@ -36,5 +36,8 @@
     <ClCompile Include="PolymorphicStableCasting.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DynamicBadCastRef.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

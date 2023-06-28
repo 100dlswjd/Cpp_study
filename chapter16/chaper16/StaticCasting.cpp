@@ -1,4 +1,4 @@
-/*
+
 #include <iostream>
 
 class Car
@@ -38,4 +38,3 @@ int main(void)
 	ptruck2->ShowTruckState();
 	return 0;
 }
-*/

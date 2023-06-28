@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConstCasting.cpp" />
+    <ClCompile Include="DynamicBadCastRef.cpp" />
     <ClCompile Include="DynamicCasting.cpp" />
     <ClCompile Include="PolymorphicDynamicCasting.cpp" />
     <ClCompile Include="PolymorphicStableCasting.cpp" />

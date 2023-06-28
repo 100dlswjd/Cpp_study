@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 class SoSimple
@@ -29,3 +30,4 @@ int main(void)
 		comPtr->ShowSimpleInfo();
 	return 0;
 }
+*/
