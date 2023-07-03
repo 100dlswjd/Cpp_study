@@ -3,6 +3,7 @@
 namespace IntegralTypes
 {    class MainApp
     {
+        /*
         static void Main(string[] args)
         {
             sbyte a = -10;
@@ -21,6 +22,21 @@ namespace IntegralTypes
             long g = -500_000_000_000;
             ulong h = 2_000_000_000_000_000_000;
             Console.WriteLine($"g = {g}, h = {h}");
+        }
+        */
+        static void Main(string[] args)
+        {
+            byte a = 240; // 10진수
+            Console.WriteLine($"a = {a}");
+
+            byte b = 0b1111_0000; // 2진수
+            Console.WriteLine($"b = {b}");
+
+            byte c = 0XF0; // 16진수
+            Console.WriteLine($"c = {c}");
+
+            uint d = 0x1234_abcd; // 16진수
+            Console.WriteLine($"d = {d}");
         }
     }
 }
