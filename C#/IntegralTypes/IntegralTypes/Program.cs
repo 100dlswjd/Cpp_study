@@ -53,6 +53,7 @@ namespace IntegralTypes
             Console.WriteLine(b);
         }
         */
+        /*
         static void Main(string[] args)
         {
             uint a = uint.MaxValue;
@@ -60,6 +61,14 @@ namespace IntegralTypes
             a = a + 1;
             Console.WriteLine(a);
         }
+        */
+        static void Main(string[] args)
+        {
+            float a = 3.1415_9265_3589_7932_3846f;
+            Console.WriteLine(a);
 
+            double b = 3.1415_9265_3589_7932_3846;
+            Console.WriteLine(b);
+        }
     }
 }
