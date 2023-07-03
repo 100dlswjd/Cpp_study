@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Runtime.InteropServices;
+
 namespace IntegralTypes
 {    class MainApp
     {
@@ -24,6 +26,7 @@ namespace IntegralTypes
             Console.WriteLine($"g = {g}, h = {h}");
         }
         */
+        /*
         static void Main(string[] args)
         {
             byte a = 240; // 10진수
@@ -38,5 +41,25 @@ namespace IntegralTypes
             uint d = 0x1234_abcd; // 16진수
             Console.WriteLine($"d = {d}");
         }
+        */
+        // SignedUnsigned
+        /*
+        static void Main(string[] args)
+        {
+            byte a = 255;
+            sbyte b = (sbyte)a;
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+        */
+        static void Main(string[] args)
+        {
+            uint a = uint.MaxValue;
+            Console.WriteLine(a);
+            a = a + 1;
+            Console.WriteLine(a);
+        }
+
     }
 }
