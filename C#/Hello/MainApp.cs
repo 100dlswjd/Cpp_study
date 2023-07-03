@@ -14,5 +14,20 @@ namespace Hello
             }
             WriteLine("Hello, {0}", args[0]);
         }
+        
+        static void Test_1(string[] args)
+        {
+            Console.WriteLine("여러분, 안녕하세요?");
+            Console.WriteLine("반갑습니다!");
+        }
+
+        static void Test_2(string[] args)
+        {
+
+        }
     }
+
+   
 }
+
+
