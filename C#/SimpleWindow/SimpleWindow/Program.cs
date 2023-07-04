@@ -35,17 +35,26 @@ namespace UsingApplication
         static void Main(string[] args)
         {
             MainApp form = new MainApp();
+            int clickCount = 0;
             form.Click += new EventHandler(
                 (sender, events) =>
                 {
-                    Console.WriteLine("Closing Window...");
+                    clickCount++;
+                    Console.WriteLine($"Click! Window... {clickCount}");
+                    //Application.Exit();
+                }
+                );
+            form.DoubleClick += new EventHandler(
+                (sender, e) => 
+                {
+                    Console.WriteLine("double Click ! window Close !!");
                     Application.Exit();
                 }
                 );
+
             Console.WriteLine("Starting Window Application...");
-            //Application.Run(form);
+            Application.Run(form);
             Console.WriteLine("Exiting Window Application...");
-        }
-        
+        }        
     }
 }
