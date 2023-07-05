@@ -1,7 +1,9 @@
 ﻿namespace Char
 {
     class MainApp
-    {
+    {   
+        // char
+        /*
         static void Main(string[] args)
         {
             char a = '안';
@@ -16,6 +18,15 @@
             Console.Write(d);
             Console.Write(e);
             Console.WriteLine();
+        }
+        */
+
+        static void Main(string[] args)
+        {
+            string a = "안녕하세요?";
+            string b = "안녕해요";
+            Console.WriteLine(a);
+            Console.WriteLine(b);
         }
     }
 }
